@@ -1,6 +1,6 @@
 # AI Job Autofill Landing Page
 
-![Hero Section Screenshot](images/autofill-hero-illustration.png)
+![Hero Section Screenshot](images/[autofill-hero-illustration.png)
 
 ## Table of Contents
 
