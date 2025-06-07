@@ -1,0 +1,845 @@
+/* General Styles & Base */
+body {
+    font-family: 'Poppins', sans-serif; /* RezuWizard's clean sans-serif font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Good readability */
+    color: #333; /* Dark gray for primary text */
+    background-color: #f8f9fa; /* Very light gray background for the page */
+    overflow-x: hidden; /* Prevent horizontal scroll from responsiveness */
+}
+
+.container {
+    max-width: 1200px; /* Max content width, typical for modern sites */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding on sides for smaller screens */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold headings */
+    color: #333;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5em; } /* Large hero headline */
+h2 { font-size: 2.5em; } /* Section titles */
+h3 { font-size: 1.8em; } /* Sub-headings, stats */
+p { font-size: 1.1em; color: #555;} /* Body text color */
+
+a {
+    text-decoration: none;
+    color: #4A76FF; /* RezuWizard's primary blue for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3a62d3; /* Slightly darker blue on hover */
+}
+
+/* Buttons (RezuWizard Style) */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px; /* Slightly rounded corners */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    display: inline-block; /* Allows padding and margin to work correctly */
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping inside buttons */
+}
+
+.btn-primary {
+    background-color: #4A76FF; /* RezuWizard's main blue */
+    color: #fff;
+    border: 2px solid #4A76FF;
+}
+
+.btn-primary:hover {
+    background-color: #3a62d3; /* Slightly darker blue on hover */
+    border-color: #3a62d3;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #4A76FF;
+    border: 2px solid #4A76FF;
+}
+
+.btn-outline:hover {
+    background-color: #4A76FF;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-dark { /* For Jobright's black buttons, adapted to RezuWizard's palette */
+    background-color: #333; /* Dark gray, close to black */
+    color: #fff;
+    border: 2px solid #333;
+}
+
+.btn-dark:hover {
+    background-color: #000;
+    border-color: #000;
+    transform: translateY(-2px);
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: #555; /* Icon color */
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+    color: #4A76FF;
+}
+
+.center-btn {
+    display: block; /* Make it a block element to center with margin auto */
+    margin: 40px auto 20px auto;
+    text-align: center; /* This might be redundant but ensures text centering */
+}
+
+/* Header Section */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow like RezuWizard */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.main-header .logo {
+    font-size: 2em;
+    font-weight: 700;
+    color: #4A76FF; /* RezuWizard's logo color */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 30px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0; /* No margin on the last item */
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Add .active class for current page */
+    color: #4A76FF;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #fff;
+    padding: 100px 0; /* More padding for hero */
+    text-align: left;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px; /* Increased gap */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px; /* Ensure content doesn't get too squished */
+}
+
+.hero-content h1 {
+    font-size: 3.8em; /* Slightly larger headline */
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.hero-buttons .btn {
+    margin-right: 20px;
+    margin-bottom: 10px; /* For stacking on small screens */
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Subtle rounding */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* More pronounced shadow for hero image */
+}
+
+
+/* Stats Bar (Jobright's green bar, adapted to RezuWizard's blue/white) */
+.stats-bar {
+    background-color: #E6EEF9; /* A light, soft blue background */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: inset 0 3px 8px rgba(0,0,0,0.05); /* Subtle inner shadow */
+}
+
+.stats-bar .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between stats */
+}
+
+.stats-bar .stat-item {
+    margin: 10px; /* Adjust margin for overall spacing */
+}
+
+.stats-bar .stat-item h3 {
+    font-size: 2.8em; /* Larger stat numbers */
+    color: #4A76FF; /* RezuWizard's accent blue */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.stats-bar .stat-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Feature Highlight Sections (Autofill on ATSs, Tailor Resume, Match Score) */
+.feature-highlight {
+    padding: 90px 0; /* Consistent padding */
+    background-color: #fff; /* Default white background */
+}
+
+.feature-highlight:nth-of-type(odd) { /* Apply light background to every other feature section */
+    background-color: #fcfcfc;
+}
+
+.feature-highlight .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap; /* Allows content to wrap */
+}
+
+.feature-highlight:nth-of-type(even) .container { /* Reverse order for even sections */
+    flex-direction: row-reverse;
+}
+
+.feature-highlight .feature-content {
+    flex: 1;
+    min-width: 300px; /* Ensure content doesn't collapse too much */
+}
+
+.feature-highlight .feature-content h2 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+}
+
+.feature-highlight .feature-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.feature-highlight .feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.feature-highlight .feature-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Subtle shadow like RezuWizard's resume image */
+    border-radius: 10px;
+}
+
+/* Specific ATS Logos */
+.ats-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* More space between logos */
+    margin-top: 40px;
+}
+
+.ats-logos img {
+    height: 35px; /* Adjust size as needed */
+    filter: grayscale(100%); /* Make logos grayscale to match RezuWizard's minimal style */
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    box-shadow: none; /* No shadow for individual logos */
+}
+
+.ats-logos img:hover {
+    filter: grayscale(0%); /* Full color on hover */
+    opacity: 1;
+}
+
+
+/* Job Board Section */
+.job-board-section {
+    background-color: #E6EEF9; /* Light blue background */
+    padding: 90px 0;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.job-board-header h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+}
+
+.job-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* More space between stats */
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Consistent gap for cards */
+}
+
+.job-card {
+    background-color: #fff;
+    padding: 30px; /* More padding */
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* More subtle shadow */
+    width: calc(33.333% - 25px); /* Three cards per row, account for gap */
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex; /* Flexbox for internal alignment */
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px; /* Ensure consistent card height */
+}
+
+.job-card:hover {
+    transform: translateY(-7px); /* More pronounced lift */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12); /* Stronger shadow on hover */
+}
+
+.job-card p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.job-card h4 {
+    font-size: 1.4em;
+    margin: 0;
+    color: #333;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 90px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial-header-box {
+    background-color: #4A76FF; /* RezuWizard's blue background for this section */
+    color: #fff;
+    padding: 60px; /* More padding */
+    border-radius: 12px; /* More rounded corners */
+    margin-bottom: 60px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* More prominent shadow */
+}
+
+.testimonial-header-box h2 {
+    color: #fff;
+    font-size: 3.2em; /* Larger headline */
+    margin-bottom: 25px;
+}
+
+.testimonial-header-box p {
+    font-size: 1.2em;
+    color: #eee;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider min width */
+    gap: 35px; /* More space between cards */
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 35px; /* More padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px; /* Ensure consistent card height */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.testimonial-card .quote {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #444;
+}
+
+.testimonial-card .user-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* Pushes user info to the bottom */
+}
+
+.testimonial-card .user-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 18px;
+    border: 3px solid #4A76FF; /* RezuWizard accent on profile pic */
+    object-fit: cover; /* Ensure image covers the circle */
+}
+
+.testimonial-card .user-info span {
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+}
+
+/* How It Works Section (4 Easy Steps) */
+.how-it-works-autofill {
+    padding: 90px 0;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.how-it-works-autofill h2 {
+    font-size: 2.8em;
+    margin-bottom: 60px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider min width */
+    gap: 40px; /* More space */
+    margin-bottom: 50px;
+}
+
+.step-card {
+    background-color: #fff;
+    padding: 35px; /* More padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+    padding-top: 70px; /* Space for the number */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 180px; /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.step-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.step-number {
+    position: absolute;
+    top: -30px; /* Position the number circle outside the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4A76FF; /* RezuWizard blue for numbers */
+    color: #fff;
+    width: 60px; /* Larger circle */
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em; /* Larger number */
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Stronger shadow for numbers */
+    border: 4px solid #fff; /* White border around number */
+}
+
+.step-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+}
+
+.step-card p {
+    color: #666;
+    font-size: 1.05em;
+    flex-grow: 1; /* Allow paragraph to take remaining space */
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 90px 0;
+    background-color: #fff;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 50px;
+}
+
+.faq-items {
+    max-width: 850px; /* Slightly wider FAQ container */
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px; /* More rounded */
+    margin-bottom: 15px;
+    overflow: hidden; /* Hide overflowing answer when collapsed */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* Subtle shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+    padding: 22px 30px; /* More padding */
+    font-size: 1.15em; /* Slightly larger font */
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* White background for question area */
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f5f5f5; /* Light hover effect */
+}
+
+.faq-item.active .faq-question {
+    background-color: #f0f5ff; /* Light blue background when active */
+    color: #4A76FF;
+}
+
+.faq-question .toggle-icon {
+    font-size: 1.8em; /* Larger icon */
+    color: #4A76FF; /* RezuWizard blue for icon */
+    transition: transform 0.3s ease;
+    line-height: 1; /* Center icon vertically */
+}
+
+.faq-item.active .faq-question .toggle-icon {
+    transform: rotate(45deg); /* Rotates plus to an X */
+}
+
+.faq-answer {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; /* Smooth transition */
+    padding: 0 30px; /* Padding for collapsed state */
+    background-color: #f9f9f9; /* Background for answer */
+}
+
+.faq-item.active .faq-answer {
+    padding: 15px 30px 25px 30px; /* Padding for expanded state */
+    max-height: fit-content; /* This helps with variable content */
+    /* Note: For very smooth accordion, sometimes dynamic JS calculation of scrollHeight is better */
+}
+
+.faq-answer p, .faq-answer ol {
+    color: #555;
+    font-size: 1.05em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faq-answer ol {
+    padding-left: 25px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #f0f2f5; /* Light gray background */
+    padding: 50px 0 20px 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-bottom: 30px;
+}
+
+.footer-links p.coming-soon {
+    font-weight: 700;
+    color: #4A76FF;
+    margin-bottom: 18px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* More space */
+    margin-bottom: 25px;
+}
+
+.footer-links ul li a {
+    color: #666;
+    font-weight: 500;
+    font-size: 1.05em;
+}
+
+.footer-links ul li a:hover {
+    color: #4A76FF;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    font-size: 1.05em;
+    color: #555;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Spacing for items in bottom footer */
+}
+
+.footer-logo {
+    font-size: 2em;
+    font-weight: 700;
+    color: #4A76FF;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 1.8em; /* Larger icons */
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4A76FF;
+}
+
+.copyright {
+    margin-top: 15px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* === Responsive Design (Media Queries) === */
+/* Adjustments for tablets and smaller desktops */
+@media (max-width: 992px) {
+    .main-nav { display: none; } /* Hide nav on smaller screens, can be replaced by a hamburger menu later */
+    .header-actions { margin-left: auto; } /* Push actions to the right if nav is hidden */
+
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.2em; }
+    h3 { font-size: 1.6em; }
+    p { font-size: 1em; }
+
+    .hero-section .container,
+    .feature-highlight .container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .feature-highlight:nth-of-type(even) .container {
+        flex-direction: column; /* Keep column direction for alternating sections too */
+    }
+
+    .hero-buttons .btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content, .feature-content, .feature-image {
+        max-width: 100%; /* Take full width */
+        min-width: unset; /* Remove min-width constraints */
+    }
+
+    .job-card {
+        width: calc(50% - 25px); /* Two cards per row */
+    }
+
+    .testimonials-grid, .steps-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust grid for smaller screens */
+        gap: 25px;
+    }
+
+    .testimonial-header-box {
+        padding: 40px;
+    }
+
+    .faq-item {
+        margin: 0 10px 15px; /* Add some side margin */
+    }
+}
+
+/* Adjustments for mobile phones */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+    p { font-size: 0.95em; }
+
+    .hero-section, .feature-highlight, .job-board-section, .testimonial-section, .how-it-works-autofill, .faq-section {
+        padding: 60px 0; /* Reduce section padding */
+    }
+
+    .main-header .container {
+        flex-direction: column; /* Stack header items vertically */
+        gap: 15px;
+    }
+    .header-actions {
+        margin-left: 0; /* Center actions */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .stats-bar .container, .job-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .job-card {
+        width: calc(100% - 25px); /* One card per row */
+    }
+
+    .testimonial-card, .step-card {
+        min-height: unset; /* Allow height to adjust */
+    }
+
+    .testimonial-header-box h2 {
+        font-size: 2.5em;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+        top: -25px;
+    }
+
+    .faq-question {
+        padding: 18px 25px;
+        font-size: 1em;
+    }
+    .faq-answer {
+        padding: 10px 25px 20px 25px;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn { padding: 10px 20px; font-size: 0.9em; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    p { font-size: 0.9em; }
+    .main-header .logo { font-size: 1.6em; }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-buttons .btn {
+        margin-right: 0;
+        width: 80%; /* Make buttons wider on very small screens */
+    }
+    .stats-bar .stat-item h3 { font-size: 2em; }
+
+    .testimonial-header-box h2 {
+        font-size: 2em;
+    }
+}
