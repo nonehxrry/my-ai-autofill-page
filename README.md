@@ -1,7 +1,6 @@
 # AI Job Autofill Landing Page
 
 ![Hero Section Screenshot](images/autofill-hero-illustration.png)
-*(Note: Replace this placeholder image with an actual screenshot of your deployed hero section.)*
 
 ## Table of Contents
 
